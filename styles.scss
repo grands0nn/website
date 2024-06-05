@@ -1,0 +1,123 @@
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-stack: 'Helvetica Neue', sans-serif;
+$nav-background-color: #ff0000; // Rode kleur voor de navigatiebalk
+
+body {
+    font-family: $font-stack;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: $nav-background-color; // Gebruik de rode kleur
+    color: white;
+    padding: 1rem;
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin: 0 1rem;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+main {
+    padding: 2rem;
+
+    section {
+        margin-bottom: 2rem;
+
+        h1, h2, h3 {
+            color: $primary-color;
+        }
+
+        p, ul, form {
+            margin: 1rem 0;
+        }
+    }
+
+    #skills ul {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            flex: 1 1 200px;
+            background: $secondary-color;
+            color: white;
+            margin: 0.5rem;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+    }
+
+    #contact form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+
+        label {
+            grid-column: span 2;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            grid-column: span 2;
+            background: $primary-color;
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+
+            &:hover {
+                background: darken($primary-color, 10%);
+            }
+        }
+    }
+}
+
+footer {
+    background: #f4f4f4;
+    padding: 1rem;
+    text-align: center;
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            display: inline;
+            margin: 0 1rem;
+
+            a {
+                color: $primary-color;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
